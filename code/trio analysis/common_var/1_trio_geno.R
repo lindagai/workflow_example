@@ -3,7 +3,6 @@
 #1_common_var
 
 ################################################################################
-#NOTE: YOU ONLY NEED TO DO THIS ONCE!
 
 #In Terminal; uncomment out to use
 

@@ -1,6 +1,10 @@
 ################################################################################
 
-#7_examine_mend_test_VCF
+#5_examine_mend_test_VCF
+
+################################################################################
+
+#NOTE: There were no Mendelian errors, so there's no need to go through the rest of the code in this file.
 
 ################################################################################
 
@@ -23,21 +27,7 @@ library(dplyr)
 
 ################################################################################
 
-#1. Examine ggplot
-
-#On laptop console
-
-fp.mend.err.plot <- "/users/lgai/latino_datasets/data/processed_data/chr8_output/chr8.mend.err.plot.png"
-filepath.cluster<-"/users/lgai/latino_datasets/data/processed_data/chr8_output/chr8.mend.err.plot.png"
-filepath.destination<-" '/Users/lindagai 1/Documents/classes/4th year/Research/latino_datasets/8q24_example/output' "
-
-scp.command<-paste0("scp lgai@jhpce01.jhsph.edu:", filepath.cluster, " ", filepath.destination)
-scp.command
-system(scp.command)
-
-################################################################################
-
-#2. Examine Mendelian errors
+#1. Examine Mendelian errors
 
 #On laptop Terminal
 
@@ -53,6 +43,22 @@ fp.mend.err.plot <-"/users/lgai/latino_datasets/data/processed_data/chr8_output/
 mend.errs<-readRDS(fp.mend.err.plot)
 
 mend.errs %>% head
+
+#No errors, so there's no need to go through the rest of the code in this file.
+
+################################################################################
+
+#2. Examine ggplot
+
+#On laptop console
+
+fp.mend.err.plot <- "/users/lgai/latino_datasets/data/processed_data/chr8_output/chr8.mend.err.plot.png"
+filepath.cluster<-"/users/lgai/latino_datasets/data/processed_data/chr8_output/chr8.mend.err.plot.png"
+filepath.destination<-" '/Users/lindagai 1/Documents/classes/4th year/Research/latino_datasets/8q24_example/output' "
+
+scp.command<-paste0("scp lgai@jhpce01.jhsph.edu:", filepath.cluster, " ", filepath.destination)
+scp.command
+system(scp.command)
 
 ################################################################################
 

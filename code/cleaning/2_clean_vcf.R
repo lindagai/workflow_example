@@ -60,22 +60,3 @@ duplicated(start(rowRanges(vcf)))
 #The VCF looks clean, so no additional cleaning was performed
 
 ################################################################################
-
-#Scratch
-
-rng <- GRanges(seqnames="chr8",
-               ranges=IRanges(
-                       start=c(129302605),
-                       end=c(129303605)
-               )
-)
-
-tab <- TabixFile(fp.vcf)
-hg<-"hg38"
-
-#Takes about 5 min
-vcf.rng <- readVcf(tab, hg, param=rng)
-
-#v. Write out
-filepath.sm.vcf<-"./data/raw_data/8q24.16snp.08_06_19.vcf"
-writeVcf(vcf.rng,filepath.sm.vcf)
